@@ -6,7 +6,7 @@ public class Piece {
 
     public Piece(Board board) {
         this.board = board;
-        position = null;
+        position = null;  //quando a peça é criada ela tem posiçao nula
     }
 
     protected Board getBoard() {
