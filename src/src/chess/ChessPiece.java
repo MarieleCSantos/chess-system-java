@@ -2,7 +2,9 @@ package chess;
 
 import boardgame.Board;
 import boardgame.Piece;
+import lombok.Getter;
 
+@Getter
 public class ChessPiece extends Piece {
     private Color color;
 
@@ -11,7 +13,7 @@ public class ChessPiece extends Piece {
         this.color = color;
     }
 
-    public Color getColor() {
-        return color;
-    }
+//    public Color getColor() {
+//        return color;
+//    } foi substituído pela anotação do lombok
 }

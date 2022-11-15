@@ -1,5 +1,8 @@
 package boardgame;
 
+import lombok.Getter;
+
+@Getter
 public class Piece {
     protected Position position;
     private Board board;
