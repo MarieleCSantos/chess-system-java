@@ -1,7 +1,9 @@
 package chess;
 
 import boardgame.Position;
+import lombok.Getter;
 
+@Getter
 public class ChessPosition {
     private char column;
     private int row;
@@ -14,13 +16,13 @@ public class ChessPosition {
         this.row = row;
     }
 
-    public char getColumn() {
-        return column;
-    }
-
-    public int getRow() {
-        return row;
-    }
+//    public char getColumn() {
+//        return column;
+//    }
+//
+//    public int getRow() {
+//        return row;
+//    }
 
     protected Position toPosition(){
         return new Position(8 - row, column - 'a');

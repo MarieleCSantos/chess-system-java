@@ -1,9 +1,6 @@
 package application;
 
-import boardgame.Board;
 import chess.ChessMatch;
-import chess.ChessPiece;
-import chess.Color;
 
 public class Program {
     public static void main(String[] args) {

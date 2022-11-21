@@ -1,7 +1,11 @@
 package boardgame;
 
+import lombok.Getter;
+
 public class Board {
+    @Getter
     private int rows;
+    @Getter
     private int columns;
     private Piece[][] pieces;
 
@@ -14,13 +18,13 @@ public class Board {
         pieces = new Piece[rows][columns];
     }
 
-    public int getRows() {
-        return rows;
-    }
-
-    public int getColumns() {
-        return columns;
-    }
+//    public int getRows() {
+//        return rows;
+//    } substituído pelo @Getter do Lombok
+//
+//    public int getColumns() {
+//        return columns;
+//    } substituído pelo @Getter do Lombok
 
     public Piece piece(int row, int column){
         if(!positionExists(row, column)){
@@ -45,13 +49,13 @@ public class Board {
     }
 
     private boolean positionExists(int row, int column){
-        return row >= 0 && row <= rows && column >= 0 && column <= columns;
+        return row >= 0 && row < rows && column >= 0 && column < columns;
     }
     public boolean positionExists(Position position){
         return positionExists(position.getRow(),position.getColumn());
     }
 
-    public boolean thereIsAPiece(Position position){
+    public boolean thereIsAPiece(Position position) {
         if(!positionExists(position)){
             throw new BoardException("Position not on the board.");
         }
