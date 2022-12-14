@@ -18,6 +18,10 @@ public abstract class ChessPiece extends Piece {
 //        return color;
 //    } foi substituído pela anotação do lombok
 
+    public ChessPosition getChessPosition() {
+        return ChessPosition.fromPosition(position);
+    }
+
     protected boolean isThereAnOpponentPiece(Position position) {
         ChessPiece p = (ChessPiece)getBoard().piece(position);
         return p != null && p.getColor() != color;
