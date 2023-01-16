@@ -90,9 +90,9 @@ public class ChessMatch {
         if (movedPiece instanceof Pawn && (target.getRow() == source.getRow() - 2 || target.getRow() == source.getRow() + 2)) {
             enPassantVulnerable = movedPiece;
         }
-//        else {
-//            enPassantVulnerable = null;
-//        }
+        else {
+            enPassantVulnerable = null;
+        }
 
         return (ChessPiece) capturedPiece;
     }
